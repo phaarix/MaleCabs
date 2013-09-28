@@ -8,9 +8,32 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".UpdateDriverStatus" >
 
-    <TextView
+    <RadioGroup
+        android:id="@+id/radioStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        
+        
+        <RadioButton
+        android:id="@+id/radioAvailable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="update status"/>
+        android:text="Available" />
+
+    <RadioButton
+         android:id="@+id/radioUnavailable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unavailable" />
+    </RadioGroup>
+    
+    <Button
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="85dp"
+        android:text="Proceed" />
 
 </RelativeLayout>

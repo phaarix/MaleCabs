@@ -908,26 +908,58 @@ public void insertAddress(String Address){
 db.insert(LOCATIONS_TABLE_NAME, null, null);
 db.close(); // Closing database connection
 		}*/
-
-	
-public String[] getAllAddresses()
-{
-	Cursor cursor = this.sqliteDBInstance.query(LOCATIONS_TABLE_NAME, new String[] {LOCATION_ADDRESS}, null, null, null, null, null);
-
-	if(cursor.getCount() >0)
-	{
-		String[] str = new String[cursor.getCount()];
-		int i = 0;
-
-		while (cursor.moveToNext())
+		
+		
+		
+		/**SSSIIIINNNGGLLLEE ARRAY*/
+		public String[] getAllAddresses()
 		{
-	         str[i] = cursor.getString(cursor.getColumnIndex(LOCATION_ADDRESS));
-	         i++;
-	     }
-		return str;
-	}
-	else
-	{
-		return new String[] {};
-	}
-}}
+			Cursor cursor = this.sqliteDBInstance.query(LOCATIONS_TABLE_NAME, new String[] {LOCATION_ADDRESS}, null, null, null, null, null);
+
+			if(cursor.getCount() >0)
+			{
+				String[] str = new String[cursor.getCount()];
+				int i = 0;
+
+				while (cursor.moveToNext())
+				{
+			         str[i] = cursor.getString(cursor.getColumnIndex(LOCATION_ADDRESS));
+			         i++;
+			     }
+				return str;
+			}
+			else
+			{
+				return new String[] {};
+			}
+		}}
+	/*  double array */
+	/*	public String[][] getAllAddresses()
+		{
+			Cursor cursor = this.sqliteDBInstance.query(LOCATIONS_TABLE_NAME, new String[] {LOCATION_ID, LOCATION_ADDRESS}, null, null, null, null, null);
+
+			if(cursor.getCount() >0)
+			{
+				String[][] str = new String[cursor.getCount()][2];
+				//String[] str = new String[cursor.getCount()];
+				int i = 0;
+
+				while (cursor.moveToNext())
+				{
+					for(int k =0; k < 2; k++)
+					{
+						if(k == 0) // location id
+							str[i][k] = cursor.getString(cursor.getColumnIndex(LOCATION_ID));
+						else if( k == 1)
+							str[i][k] = cursor.getString(cursor.getColumnIndex(LOCATION_ADDRESS));
+						
+			         	i++;
+					}
+			     }
+				return str;
+			}
+			else
+			{
+				return new String[][] {};
+			}
+		}}*/

@@ -1,23 +1,15 @@
 package com.example.malecabs;
 
 import android.app.Activity;
-import android.location.Criteria;
-import android.location.Location;
-import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 
-import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -25,11 +17,10 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class SearchAvailableTaxi extends Activity{
   
 	static final LatLng MALE = new LatLng(4.175085,73.508883);
-  //static final LatLng KIEL = new LatLng(53.551, 9.993);
-  private GoogleMap map;
-  private LocationsDb LocationsDb;
-  Button location;
-  LatLng myPosition;
+	private GoogleMap map;
+	private LocationsDb LocationsDb;
+	Button location;
+	LatLng myPosition;
    
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +33,7 @@ public class SearchAvailableTaxi extends Activity{
         .getMap();
     map.setMyLocationEnabled(true);
     
-    Marker male = map.addMarker(new MarkerOptions().position(MALE)
+    Marker male= map.addMarker(new MarkerOptions().position(MALE)
         .title("Male"));
   
     // Move the camera instantly to male with a zoom of 15.
@@ -62,6 +53,8 @@ public class SearchAvailableTaxi extends Activity{
 
   ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_item, addresses);
   textView.setAdapter(adapter);
+  
+  //
 }
   
   /*//------------------get current location
