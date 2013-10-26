@@ -19,7 +19,6 @@ public class Home extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         
-     // Get The Refference Of Buttons
         btnLoginDriver=(Button)findViewById(R.id.login_driver);
         btnSearchTaxi=(Button)findViewById(R.id.search_taxi);
         
@@ -27,8 +26,6 @@ public class Home extends Activity {
         {
     		public void onClick(View v)
     		{
-    			// TODO Auto-generated method stub
-    			
     			/// Create Intent for Login  and Start The Activity
     			Intent intentlogin=new Intent(getApplicationContext(),DriverLogin.class);
     			startActivity(intentlogin);

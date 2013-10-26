@@ -25,15 +25,15 @@
         class="com.google.android.gms.maps.MapFragment" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/current_location"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/message_get_current_location" />
     
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/send_request"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_proceed" />
+        android:text="@string/send_request_to_available_taxis" />
 
 </LinearLayout> 

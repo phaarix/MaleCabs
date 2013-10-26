@@ -1,39 +1,38 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".UpdateDriverStatus" >
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please set your current status"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
     <RadioGroup
         android:id="@+id/radioStatus"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
-        
-        
-        <RadioButton
-        android:id="@+id/radioAvailable"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Available" />
+    </RadioGroup>
 
     <RadioButton
-         android:id="@+id/radioUnavailable"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Unavailable" />
-    </RadioGroup>
+        android:id="@+id/radioAvailable"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:onClick="onRadioButtonClicked"
+        android:text="Available" />
     
-    <Button
-        android:id="@+id/radioButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="85dp"
-        android:text="Proceed" />
-
-</RelativeLayout>
+	<RadioButton
+        android:id="@+id/radioUnavailable"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:onClick="onRadioButtonClicked"
+        android:text="Unavailable" />
+</LinearLayout>

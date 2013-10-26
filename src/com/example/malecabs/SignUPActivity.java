@@ -57,7 +57,7 @@ public class SignUPActivity extends Activity
 			else
 			{
 			    // Save the Data in Database
-			    loginDataBaseAdapter.insertEntry(userName, password);
+			    loginDataBaseAdapter.insertEntry(userName, password, 0, 0, 0);
 			    Toast.makeText(getApplicationContext(), "Account Successfully Created ", Toast.LENGTH_LONG).show();
 			}
 		}

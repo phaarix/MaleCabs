@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
+
     <string name="app_name" translatable="false">Male Cabs</string>
     <string name="action_settings">Settings</string>
     <string name="edit_message">Enter your current address</string>
@@ -25,5 +25,9 @@
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
+    <string name="title_activity_search_taxis">Search Taxis</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_locate_requested_customers">LocateRequestedCustomers</string>
+    <string name="send_request_to_available_taxis">Send request to available taxis</string>
 
 </resources>

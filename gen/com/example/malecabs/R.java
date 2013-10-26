@@ -191,47 +191,54 @@ containing a value of this type.
         public static final int success=0x7f020021;
     }
     public static final class id {
-        public static final int action_forgot_password=0x7f050018;
-        public static final int action_settings=0x7f050019;
-        public static final int autoCompleteTextView1=0x7f050009;
-        public static final int button1=0x7f05000b;
-        public static final int button2=0x7f05000c;
-        public static final int buttonCreateAccount=0x7f050017;
+        public static final int Back=0x7f050016;
+        public static final int action_forgot_password=0x7f05001b;
+        public static final int action_settings=0x7f05001c;
+        public static final int autoCompleteTextView1=0x7f05000a;
+        public static final int buttonCreateAccount=0x7f05001a;
         public static final int buttonSignIN=0x7f050005;
-        public static final int buttonSignIn=0x7f050013;
+        public static final int buttonSignIn=0x7f050014;
         public static final int buttonSignUP=0x7f050006;
-        public static final int editTextConfirmPassword=0x7f050016;
-        public static final int editTextPassword=0x7f050015;
-        public static final int editTextPasswordToLogin=0x7f050012;
-        public static final int editTextUserName=0x7f050014;
-        public static final int editTextUserNameToLogin=0x7f050011;
+        public static final int current_location=0x7f05000c;
+        public static final int editTextConfirmPassword=0x7f050019;
+        public static final int editTextPassword=0x7f050018;
+        public static final int editTextPasswordToLogin=0x7f050013;
+        public static final int editTextUserName=0x7f050017;
+        public static final int editTextUserNameToLogin=0x7f050012;
         public static final int hybrid=0x7f050004;
         public static final int login_driver=0x7f050007;
-        public static final int map=0x7f05000a;
+        public static final int map=0x7f05000b;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
-        public static final int radioAvailable=0x7f05000e;
-        public static final int radioButton=0x7f050010;
-        public static final int radioStatus=0x7f05000d;
-        public static final int radioUnavailable=0x7f05000f;
+        public static final int progressBar1=0x7f050015;
+        public static final int radioAvailable=0x7f050010;
+        public static final int radioStatus=0x7f05000f;
+        public static final int radioUnavailable=0x7f050011;
+        public static final int requestmap=0x7f050009;
         public static final int satellite=0x7f050002;
         public static final int search_taxi=0x7f050008;
+        public static final int send_request=0x7f05000d;
         public static final int terrain=0x7f050003;
+        public static final int textView1=0x7f05000e;
     }
     public static final class layout {
         public static final int activity_driver_login=0x7f030000;
         public static final int activity_home=0x7f030001;
-        public static final int activity_search_available_taxi=0x7f030002;
-        public static final int activity_update_driver_status=0x7f030003;
-        public static final int list_item=0x7f030004;
-        public static final int login=0x7f030005;
-        public static final int signup=0x7f030006;
+        public static final int activity_locate_requested_customers=0x7f030002;
+        public static final int activity_search_available_taxi=0x7f030003;
+        public static final int activity_update_driver_status=0x7f030004;
+        public static final int list_item=0x7f030005;
+        public static final int login=0x7f030006;
+        public static final int request=0x7f030007;
+        public static final int signup=0x7f030008;
     }
     public static final class menu {
         public static final int driver_login=0x7f090000;
         public static final int home=0x7f090001;
-        public static final int search_available_taxi=0x7f090002;
-        public static final int update_driver_status=0x7f090003;
+        public static final int locate_requested_customers=0x7f090002;
+        public static final int search_available_taxi=0x7f090003;
+        public static final int search_taxis=0x7f090004;
+        public static final int update_driver_status=0x7f090005;
     }
     public static final class string {
         public static final int action_forgot_password=0x7f060029;
@@ -338,15 +345,19 @@ containing a value of this type.
         public static final int error_incorrect_password=0x7f06002d;
         public static final int error_invalid_email=0x7f06002b;
         public static final int error_invalid_password=0x7f06002c;
+        public static final int hello_world=0x7f060030;
         public static final int login_progress_signing_in=0x7f06002a;
         public static final int message_get_current_location=0x7f06001c;
         /**  Strings related to login 
          */
         public static final int prompt_email=0x7f060025;
         public static final int prompt_password=0x7f060026;
+        public static final int send_request_to_available_taxis=0x7f060032;
         public static final int title_activity_home=0x7f06001d;
+        public static final int title_activity_locate_requested_customers=0x7f060031;
         public static final int title_activity_login=0x7f060024;
         public static final int title_activity_search_available_taxi=0x7f06001e;
+        public static final int title_activity_search_taxis=0x7f06002f;
         public static final int title_activity_update_driver_status=0x7f06001f;
     }
     public static final class style {

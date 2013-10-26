@@ -22,6 +22,14 @@ import android.util.Log;
 		public static final String LOCATION_LATITUDE = "latitude";
 		public static final String LOCATION_LONGITUDE = "longitude";
 
+		// bookings table related
+				public static final String BOOKING_TABLE_NAME = "booking";
+				public static final String BOOKING_ID = "_id";
+				public static final String TAXI_NUMBER = "taxiNumber";
+				public static final String BOOKING_LATITUDE = "latitude";
+				public static final String BOOKING_LONGITUDE = "longitude";
+				public static final String BOOKING_ADDRESS = "address";
+				
 		@Override
 		public void onCreate(SQLiteDatabase db) {
 
@@ -32,6 +40,14 @@ import android.util.Log;
 
 			db.execSQL(sql);
 
+			sql = "CREATE TABLE " + BOOKING_TABLE_NAME + " (" + BOOKING_ID
+					+ " INTEGER PRIMARY KEY AUTOINCREMENT, " + TAXI_NUMBER
+					+ " TEXT NOT NULL, " + BOOKING_LATITUDE + " REAL NOT NULL, "
+					 + BOOKING_LONGITUDE + " REAL NOT NULL," + BOOKING_ADDRESS
+					+ " TEXT NOT NULL)";
+
+			db.execSQL(sql);
+			
 			insertInitialData(db);
 		}
 		public LocationsDb(Context context) {
@@ -908,58 +924,26 @@ public void insertAddress(String Address){
 db.insert(LOCATIONS_TABLE_NAME, null, null);
 db.close(); // Closing database connection
 		}*/
-		
-		
-		
-		/**SSSIIIINNNGGLLLEE ARRAY*/
-		public String[] getAllAddresses()
+
+	
+public String[] getAllAddresses()
+{
+	Cursor cursor = this.sqliteDBInstance.query(LOCATIONS_TABLE_NAME, new String[] {LOCATION_ADDRESS}, null, null, null, null, null);
+
+	if(cursor.getCount() >0)
+	{
+		String[] str = new String[cursor.getCount()];
+		int i = 0;
+
+		while (cursor.moveToNext())
 		{
-			Cursor cursor = this.sqliteDBInstance.query(LOCATIONS_TABLE_NAME, new String[] {LOCATION_ADDRESS}, null, null, null, null, null);
-
-			if(cursor.getCount() >0)
-			{
-				String[] str = new String[cursor.getCount()];
-				int i = 0;
-
-				while (cursor.moveToNext())
-				{
-			         str[i] = cursor.getString(cursor.getColumnIndex(LOCATION_ADDRESS));
-			         i++;
-			     }
-				return str;
-			}
-			else
-			{
-				return new String[] {};
-			}
-		}}
-	/*  double array */
-	/*	public String[][] getAllAddresses()
-		{
-			Cursor cursor = this.sqliteDBInstance.query(LOCATIONS_TABLE_NAME, new String[] {LOCATION_ID, LOCATION_ADDRESS}, null, null, null, null, null);
-
-			if(cursor.getCount() >0)
-			{
-				String[][] str = new String[cursor.getCount()][2];
-				//String[] str = new String[cursor.getCount()];
-				int i = 0;
-
-				while (cursor.moveToNext())
-				{
-					for(int k =0; k < 2; k++)
-					{
-						if(k == 0) // location id
-							str[i][k] = cursor.getString(cursor.getColumnIndex(LOCATION_ID));
-						else if( k == 1)
-							str[i][k] = cursor.getString(cursor.getColumnIndex(LOCATION_ADDRESS));
-						
-			         	i++;
-					}
-			     }
-				return str;
-			}
-			else
-			{
-				return new String[][] {};
-			}
-		}}*/
+	         str[i] = cursor.getString(cursor.getColumnIndex(LOCATION_ADDRESS));
+	         i++;
+	     }
+		return str;
+	}
+	else
+	{
+		return new String[] {};
+	}
+}}
